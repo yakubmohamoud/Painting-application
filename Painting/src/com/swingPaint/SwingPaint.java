@@ -1,7 +1,4 @@
 package com.swingPaint;
-
-
- 
 import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -50,7 +47,7 @@ public class SwingPaint {
     // add to content pane
     content.add(drawArea, BorderLayout.CENTER);
  
-    // create controls to apply colors and call clear feature
+    // create controls to apply colours and call clear feature
     JPanel controls = new JPanel();
  
     clearBtn = new JButton("Clear");
