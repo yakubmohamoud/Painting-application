@@ -10,7 +10,7 @@ import javax.swing.JPanel;
  
 public class SwingPaint {
  
-  JButton clearBtn, blackBtn, blueBtn, greenBtn, redBtn, magentaBtn;
+  JButton clearBtn, blackBtn, blueBtn, greenBtn, redBtn, magentaBtn, Rec;
   DrawArea drawArea;
   ActionListener actionListener = new ActionListener() {
  
@@ -28,8 +28,16 @@ public class SwingPaint {
       } else if (e.getSource() == magentaBtn) {
         drawArea.magenta();
       }
+      else if (e.getSource() == Rec) {
+    	  
+          drawArea.Rec();
+        }
+   
+     
     }
   };
+  
+  
  
   public static void main(String[] args) {
     new SwingPaint().show();
@@ -62,6 +70,8 @@ public class SwingPaint {
     redBtn.addActionListener(actionListener);
     magentaBtn = new JButton("Magenta");
     magentaBtn.addActionListener(actionListener);
+    Rec = new JButton("Rectangle");
+    Rec.addActionListener(actionListener);
  
     // add to panel
     controls.add(greenBtn);
@@ -70,6 +80,7 @@ public class SwingPaint {
     controls.add(redBtn);
     controls.add(magentaBtn);
     controls.add(clearBtn);
+    controls.add(Rec);
  
     // add to content pane
     content.add(controls, BorderLayout.NORTH);
